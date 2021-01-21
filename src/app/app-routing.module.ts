@@ -4,7 +4,8 @@ import {DrupalNodeComponent} from './drupal-node/drupal-node.component';
 
 
 const routes: Routes = [
-  {path: 'nodeid', component: DrupalNodeComponent}
+  {path: 'nodeid', component: DrupalNodeComponent},
+  {path: '**', redirectTo: '/'}
 ];
 
 @NgModule({
