@@ -7,11 +7,10 @@ const BASE_URL = 'https://local.sportsengine.com/node/api/v1?id=';
   providedIn: 'root'
 })
 export class DrupalnodeService {
-  private nodeid = '10856';
-
+  
   constructor(private http: HttpClient) { }
 
-  getNode() {
-    return this.http.get(`${BASE_URL}${this.nodeid}`);
+  getNode(nodeid) {
+    return this.http.get(`${BASE_URL}${nodeid}`);
   }
 }

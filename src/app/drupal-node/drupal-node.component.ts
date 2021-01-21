@@ -7,14 +7,11 @@ let drupalNode;
   styleUrls: ['./drupal-node.component.scss']
 })
 export class DrupalNodeComponent implements OnInit {
-  
+  drupalnodes = null;
   constructor(private drupalnodeService: DrupalnodeService) { }
 
   ngOnInit(): void {
-    this.drupalnodeService.getNode().subscribe(function(data){
-      drupalNode = data;
-     console.log('data', drupalNode.response);  
-    });
+    this.drupalnodeService.getNode('10386').subscribe(drupalnodes => this.drupalnodes = drupalnodes);
   }
   
 
