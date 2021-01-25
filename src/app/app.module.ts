@@ -7,12 +7,14 @@ import { DrupalNodeComponent } from './drupal-node/drupal-node.component';
 import { DrupalnodeService } from './shared/services/drupalnode.service';
 import { MaterialModule } from './material/material.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { ChildDrupalNodesComponent } from './drupal-node/child-drupal-nodes/child-drupal-nodes.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DrupalNodeComponent
+    DrupalNodeComponent,
+    ChildDrupalNodesComponent
   ],
   imports: [
     BrowserModule,
